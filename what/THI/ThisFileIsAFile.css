@@ -1,0 +1,108 @@
+body {
+    background-color: lightgrey;
+    color: darkred;
+    text-align: center;
+}
+
+H1{
+    font-size: 50px;
+}
+
+
+span{
+    font-size:15px;
+}
+
+a{
+    color:#357EC7;
+}
+
+table{
+    margin:auto;
+}
+
+a:hover {
+    filter: contrast(99999%);
+    font-size:20px;
+    font-family:cursive;
+    font-style:italic;
+}
+
+li{
+    text-align:left;
+}
+
+#uhoh{
+    font-family:cursive;
+    font-style:italic;
+}
+
+#uhh{
+    color: lightgrey;
+}
+
+#filter{
+    animation: drunkFilter 10s forwards;
+}
+@keyframes drunkFilter{
+    from{
+        color:lightgrey;
+    }
+    to{
+        color:darkred;
+    }
+}
+
+#filtertwo{
+    animation: drunkFilterTwo 10s forwards;
+}
+@keyframes drunkFilterTwo{
+    from{
+        color:lightgrey;
+    }
+    to{
+        color:black;
+    }
+}
+
+#filterthree{
+    animation: drunkFilter 30s forwards;
+}
+
+#filterfour{
+    animation: drunkFilter 50s forwards;
+}
+
+
+#filterfive{
+    animation: drunkFilterTwo 90s forwards;
+}
+
+#filtersix{
+    animation: drunkFilter 150s forwards;
+}
+
+
+#rainbow{
+    animation: aFilter 300s forwards;
+}
+@keyframes aFilter{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(480000deg);
+    }
+}
+
+#uhhTwo{
+    animation: uhhFilter 90s forwards;
+}
+@keyframes uhhFilter{
+    from{
+        color:lightgrey;
+    }
+    to{
+        color:grey;
+    }
+}
