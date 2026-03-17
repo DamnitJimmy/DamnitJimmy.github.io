@@ -1,0 +1,23 @@
+Current File version 0.4.93
+	Added "changelog.txt"
+	Note: recalled about where stuff was approximately, didn't check, and guesstimated file versions.
+
+File version 0.3.4 to 0.4.9
+	Added previous projects files
+	Added links to previous projects
+	Changed formatting of project links
+	Changed file names to further professionalism:
+		-"itsADimwitFile.html" to "aboutJim.html"
+		-"itsAFileDimwit.html" to "contactJim.html"
+
+File version 0.2.0 to 0.3.39
+	Added Table for previous projects
+	Changed Formatting of Table
+
+File version 0.0.1 to 0.1.99
+	Project Created by JimmyBoi
+	File added "index.html"
+	File added "thisFileIsAFile.css"
+	File added "itsADimwitFile.html"
+	File added "itsAFileDimwit.html"
+	File added "FileOfOtherFiles.html"
