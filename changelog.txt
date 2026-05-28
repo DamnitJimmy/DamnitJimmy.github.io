@@ -1,4 +1,11 @@
-Current File version 0.5.01
+Current File version
+	Edited "FunnyGuy.html"
+	Various Link Editing
+
+File version 0.5.2
+	Added "FunnyGuy.html"
+
+File version 0.5.01
 	Added useless files in the process 
 		- "trash" in "./what", and "alsotrash" in "./what/THI"
 	Switched over to Github from CodeHS
