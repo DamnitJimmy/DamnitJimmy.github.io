@@ -1,1 +1,111 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>you're a funny guy. very funny.</title>
+        <style>
+            body{
+                text-align: center;
+            }
+		    #growbox
+	        {
+	            display:flex;
+	            border: 1px solid black;
+	            height:400px;
+	            width:600px;
+	            margin: auto;
+	        }
+		
+		  </style>
+    </head>
+  
+    <body>
+        <p>Click to Start/Stop!</p>
+        <div id="growbox">
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        </div>
+        <script src="https://unpkg.com/chs-js-lib@latest/dist/chs.iife.js"></script>
+      <script>
+        /* This program has a ball rolling across a floor,
+        bouncing off the left and right walls.
+        */
+        let box = document.getElementById("growbox");
+        
+        const FLOOR_Y = 200;
+        const BIG_RADIUS = 50;
+        const DELAY = 20;
+        
+        let shit = true;
+        let bigBall;
+        
+        // This is how much the ball will move every DELAY milliseconds 
+        let dx = 3;
+        let dy = 3;
+        
+        function main(){
+            bigBall = initBall(BIG_RADIUS, "#b0f542", 100, FLOOR_Y - BIG_RADIUS);
+        	mouseClickMethod(start);
+        	add(box);
+        }
+        
+        function start(){
+            if(shit){
+                setTimer(draw, DELAY);
+                shit = false;
+            }else if(!shit){
+                stopTimer(draw);
+                shit = true;
+            }
+        }
+        
+        // This function adds the ball to the canvas with parameters
+        function initBall(radius, color, x, y){
+        	let ball = new Circle(radius);
+        	ball.setPosition(x, y);
+        	ball.setColor(color);
+        	add(ball);
+        	
+        	return ball;
+        }
+        
+        // This function creates a rectangular floor with parameters
+        // This function moves the ball, checking to see if it has
+        // collided with walls.
+        function draw(){
+        	checkWalls();
+        	bigBall.move(dx, dy);
+        }
+        
+        // This function checks to see if the ball has hit the left
+        // or right wall, reversing it's dx value.
+        function checkWalls(){
+        	// Bounce off right wall
+        	if(bigBall.getX() + bigBall.getRadius() >= getWidth()){
+        		dx = Randomizer.nextInt(-2, -4);
+        		bigBall.setColor(Randomizer.nextColor());
+        	}
+        	
+        	// Bounce off left wall
+        	if(bigBall.getX() - bigBall.getRadius() <= 0){
+        		dx = Randomizer.nextInt(2, 4);
+        		bigBall.setColor(Randomizer.nextColor());
+        	}
+        	
+        	
+        	// Up down segment
+        	if(bigBall.getY() + bigBall.getRadius() >= getHeight()){
+        		dy = Randomizer.nextInt(-2, -4);
+        		bigBall.setColor(Randomizer.nextColor());
+        	}
+        	
+        	// Bounce off left wall
+        	if(bigBall.getY() - bigBall.getRadius() <= 0){
+        		dy = Randomizer.nextInt(2, 4);
+        		bigBall.setColor(Randomizer.nextColor());
+        	}
+        }
+        
+        main();
+      </script>
+      <a href = "https://google.com">Link Back</a>
+    </body>
+</html>
